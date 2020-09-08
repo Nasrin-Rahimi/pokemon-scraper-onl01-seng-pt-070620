@@ -4,4 +4,6 @@ Scraper.new(@db).scrape
 
 all_pokemon = @db.execute("SELECT * FROM pokemon;")
 
-# test out your code here!
+all_pokemon.each do |row|
+    puts "#{row[0]} #{row[1]} #{row[2]}"
+end
